@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: roboto;
+    font-size:24px;
+    align-items: center;
+    overflow: hidden;
+    height:100vh;
+}   
+.container{
+    display: flex;
+    width: 90vw;
+    margin: 50px auto;
+}
+.cards{
+    height: 80vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    flex: 0.5;
+    transition:flex 0.7s ease-in;
+
+}
+.cards h3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity:0;
+}
+.cards.active{
+    flex: 5;
+}
+.cards.active h3{
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.5s;
+}
