@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&display=swap');
+:root{
+    --color-soul: #22254b;
+    --color-violet:#373b69;
+    --color-black: #16191b;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Merriweather;
+    font-weight: 400;
+    background-color: var(--color-soul);
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-violet);
+    height: 80px;
+    align-items: center;
+    padding-right: 1.5rem;
+}
+.logo a{
+    font-size: 45px;
+    font-family: Merriweather, sans-serif;
+    font-weight:700;
+    text-decoration: none;
+    color: #ffff;
+    padding-left: 50px;
+}
+ .sreach{
+    
+    font-family: Merriweather;
+    width: 90%;
+    font-size: 24px;
+    background-color: transparent;
+    color: #ffff;
+    border-radius:50px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-black);
+}
+.sreach::placeholder{
+    color: #7378c5;
+}
+.sreach:focus{
+    outline: none;
+    background-color:var(--color-soul);
+}
+.main{
+    display: flex;
+
+    flex-wrap: wrap;
+}
+.movie{
+    width: 350px;
+    margin:35px;
+    position: relative;
+    color: #ffff;
+    background-color: var(--color-violet);
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 4px 5px 5px rgb(0 0 0 / 30%) ;
+}
+.movie img{
+    width: 100%;
+}
+.movie .movie-info{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px 5px  20px;   
+}
+.movie-info h3{
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.movie-info .green{
+    color:rgb(50, 245, 50);
+}
+.movie-info .orange{
+    color:rgb(253, 170, 15);
+}
+.movie-info .red{
+    color:red;
+}
+.movie .overview{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    max-height: 100%;
+    background-color: var(--color-violet);
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in;
+}
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
